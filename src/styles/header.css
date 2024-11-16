@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
 
-    background-color: green;
-    border-radius: 1.5px;
+    background-color: white;
+    color: black;
+    border-radius: 1px;
     width: 100%;
 }
 
@@ -15,3 +16,14 @@
     margin-bottom: .5rem;
 }
 
+.test {
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 150ms cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+    &:hover {
+        transform: scaleX(0);
+        background-color: aqua;
+    }
+}

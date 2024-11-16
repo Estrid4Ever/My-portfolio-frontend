@@ -31,6 +31,7 @@ function Header() {
         <h1 className="title">{text}</h1>
       </div>
       {subFolder}
+      <button className="test">Hej</button>
     </>
   );
 }

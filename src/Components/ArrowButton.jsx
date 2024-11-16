@@ -10,7 +10,7 @@ function ArrowButton({clicked, setClicked}) {
     function handleClick() {
         
         if (!clicked) {
-            setArrowClass("greater-than blink clicked");
+            setArrowClass("greater-than clicked");
         } else {
             setArrowClass("greater-than blink");
         }
