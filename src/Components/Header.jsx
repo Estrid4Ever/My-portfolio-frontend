@@ -12,16 +12,19 @@ function Header() {
   var subFolder = <></>;
 
   useEffect(() => {
-    
-    
 
-  }, []);
+    const subFolderCurtain = document.getElementsByClassName("curtain");
+    
+    if (subFolderCurtain[0]) {
+        if (clicked) {
+        subFolderCurtain[0].classList.add("show-curtain");
+      } else {
+        subFolderCurtain[0].classList.remove("show-curtain");
+      }
+    }
 
-  if (clicked) {
-    subFolder = <SubFolder></SubFolder>;
-  } else {
-    subFolder = <></>;
-  }
+  }, [clicked]);
+
 
 
   return (
@@ -30,8 +33,7 @@ function Header() {
         <ArrowButton clicked={clicked} setClicked={setClicked}></ArrowButton>
         <h1 className="title">{text}</h1>
       </div>
-      {subFolder}
-      <button className="test">Hej</button>
+      <SubFolder></SubFolder>
     </>
   );
 }
